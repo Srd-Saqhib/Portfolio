@@ -9,17 +9,11 @@ body {
     background: linear-gradient(to bottom right, #f0f4ff, #fdfdff);
     color: #333;
     line-height: 1.6;
-    animation: fadeInBody 1s ease-in;
-}
-
-@keyframes fadeInBody {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 header {
     background-color: #1e2a38;
-    color: #fdfdfd;
+    color: #e7e1fe;
     text-align: center;
     padding: 2rem 0;
     font-size: 1.6rem;
@@ -38,18 +32,6 @@ main {
     align-items: center;
     gap: 2rem;
     margin-bottom: 3rem;
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .photo {
@@ -60,14 +42,17 @@ main {
 }
 
 .photo img {
-    max-width: 200px;
+    max-width: 180px;
     width: 100%;
-    height: auto;
-    border-radius: 50%;
+    aspect-ratio: 1 / 1;   
+    border-radius: 50%;   
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     object-fit: cover;
+    object-position: center 0%;
     transition: transform 0.4s ease;
 }
+
+
 
 .photo img:hover {
     transform: scale(1.05);
@@ -97,7 +82,6 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     font-size: 1.05rem;
     transition: transform 0.3s ease;
-    animation: fadeInUp 0.8s ease forwards;
 }
 
 .projects:hover {
@@ -111,7 +95,6 @@ main {
 
 .academics {
     margin-bottom: 3rem;
-    animation: fadeInUp 0.8s ease forwards;
 }
 
 .academics table {
